@@ -23,7 +23,7 @@ class MoneyTransferTest {
         dashboardPage = verificationPage.validVerify(verificationCode);
     }
     @Test
-    void shouldTransferFromFirstToSecondCard() {
+    void shouldMakeTransferFromFirstToSecondCard() {
         var firstCardInfo = getFirstCardInfo();
         var secondCardInfo = getSecondCardInfo();
         var firstCardBalance = dashboardPage.getCardBalance(firstCardInfo);
@@ -40,7 +40,7 @@ class MoneyTransferTest {
     }
 
     @Test
-    void shouldTransferFromSecondToFirstCard() {
+    void shouldMakeTransferFromSecondToFirstCard() {
         var firstCardInfo = getFirstCardInfo();
         var secondCardInfo = getSecondCardInfo();
         var firstCardBalance = dashboardPage.getCardBalance(firstCardInfo);
@@ -57,7 +57,7 @@ class MoneyTransferTest {
     }
 
     @Test
-    void shouldErrorIfTransferMoreBalance() {
+    void shouldShowErrorIfTransferMoreBalance() {
         var firstCardInfo = getFirstCardInfo();
         var secondCardInfo = getSecondCardInfo();
         var firstCardBalance = dashboardPage.getCardBalance(firstCardInfo);
